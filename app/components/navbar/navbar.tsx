@@ -1,10 +1,11 @@
 import React from 'react'
 import Logo from './logo'
 import Container from '../container'
-import Search from './search'
+
 import UserMenu from './usermenu'
 import Categories from './categories'
 import { SafeUser } from '@/app/types'
+import Search from './Search'
 
 interface NavbarInterface{
   currentUser?: SafeUser | null | undefined;
