@@ -4,7 +4,7 @@ import {User } from '@prisma/client'
 
 import React from 'react'
 import { IoHeart, IoHeartOutline } from 'react-icons/io5'
-import usefavorite from '../hooks/useFavorites'
+// import usefavorite from '../hooks/useFavorites'
 import { SafeUser } from '../types'
 
 interface HeartButtonInterface{
@@ -16,12 +16,12 @@ const HeartButton: React.FC<HeartButtonInterface> = ({
     listingId,
     currentUser
 }) => {
-  const {hasFavorited, toggleFavorite} = usefavorite({listingId, currentUser})
-  
+  // const {hasFavorited, toggleFavorite} = usefavorite({listingId, currentUser})
+  const hasFavorited = false
 
   return (
     <div 
-    onClick={toggleFavorite}
+    // onClick={toggleFavorite}
     className='
         relative 
         cursor-pointer
