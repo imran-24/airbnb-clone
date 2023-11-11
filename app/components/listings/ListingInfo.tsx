@@ -79,9 +79,9 @@ const ListingInfo: React.FC<ListingInfoInterface> = ({
         </div>
         <hr />
 
-        {/* <SelectMap 
+        <SelectMap 
             value={location?.latlng}
-        /> */}
+        />
      </div>
   )
 }

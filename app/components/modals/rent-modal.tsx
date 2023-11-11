@@ -327,7 +327,7 @@ const RentModal = () => {
     body={body}
     footer={footer}
     disabled={isLoading}
-    title='Airbnb yoru home!'
+    title='Airbnb your home!'
     actionLabel={actionLabel}
     secondaryLabel={secondaryLabel}
     secondaryAction={STEPS.CATEGORY ? undefined : onBack}

@@ -51,7 +51,7 @@ const Home = async({ searchParams}: HomeProps) => {
             data={listing}
             actionId={listing.id}
             />
-
+          
           ))
         }
       

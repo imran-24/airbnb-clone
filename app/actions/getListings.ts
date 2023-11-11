@@ -23,6 +23,7 @@ export default async function getAllListings(params: IListingInterface) {
     }
     catch(error: any){
         console.log(error)
+        throw new Error(error);
     }
 
 }

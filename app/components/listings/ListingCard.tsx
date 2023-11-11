@@ -14,9 +14,9 @@ import { format } from 'date-fns'
 interface ListingCardInterface{
     data: SafeListing,
     currentUser: SafeUser | null | undefined,
+    actionId?: string,
     disabled?: boolean,
     onAction?: (id: string)=> void,
-    actionId?: string,
     actionLabel?: string,  
     reservation?: Reservation
 }
@@ -70,10 +70,10 @@ const ListingCard: React.FC<ListingCardInterface> = ({
             overflow-hidden
             relative
             rounded-xl'>
-                <img
+                <Image
                 alt='listing'
                 src={data?.imageSrc}
-                
+                fill
                 className='
                 w-full
                 h-full

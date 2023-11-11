@@ -32,7 +32,6 @@ const ListingClient: React.FC<ListingClientInterface> = ({
     listing,
     currentUser
 }) => {
-    console.log(reservations);
     const loginModal = useLoginModal()
     const router = useRouter()
 
@@ -60,7 +59,7 @@ const ListingClient: React.FC<ListingClientInterface> = ({
     },[categories, listing.category])
 
     const onCreateReservation = useCallback(()=>{
-        if(!currentUser) loginModal.onOpen();
+        if(!currentUser) return  loginModal.onOpen();
 
         setIsLoading(true);
         axios.post('/api/reservations', {

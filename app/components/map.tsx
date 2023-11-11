@@ -59,7 +59,7 @@ const SelectMap: React.FC<SelectMapIntrface> = ({value}) => {
   return (
     <div className='h-full  w-full'>
       <ReactMapGL
-        mapboxAccessToken="pk.eyJ1IjoiaW1yYW4xOTU2IiwiYSI6ImNsa3h0ajViOTAwaWEzbW5wdmY4M2M0OWIifQ.I423Zm6aT0dFSw-ocswIdQ"
+        mapboxAccessToken={"pk.eyJ1IjoiaW1yYW4xOTU2IiwiYSI6ImNsb3N3NDA1OTA0enkyanFlYWN6NjY2dnMifQ.hBgd1muhY14pBPifBXKWvA"}
         initialViewState={initialViewState}
         doubleClickZoom
         style={{ borderRadius: 6, padding: 6, minHeight: 300}}
