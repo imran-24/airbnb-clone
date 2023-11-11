@@ -5,8 +5,8 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./PropertiesClient";
-import getAllListings from "../actions/getListings";
 import PropertiesClient from "./PropertiesClient";
+import getAllListingsByUserId from "../actions/getListingsByUserId";
 
 
 
@@ -24,7 +24,7 @@ const PropertiesPage = async () => {
     );
   }
 
-  const listings = await getAllListings({ userId: currentUser.id });
+  const listings = await getAllListingsByUserId({ userId: currentUser.id });
 
   if (listings.length === 0) {
     return (

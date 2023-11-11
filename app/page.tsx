@@ -9,12 +9,9 @@ import ListingCard from './components/listings/ListingCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
-interface HomeProps{
-  searchParams: IListingInterface
-}
-const Home = async({ searchParams}: HomeProps) => {
-  console.log(searchParams)
-  const listings = await getAllListings(searchParams)
+const Home = async() => {
+ 
+  const listings = await getAllListings()
   const isEmpty = listings?.length == 0
   const currentUser = await getCurrentUser()
 
