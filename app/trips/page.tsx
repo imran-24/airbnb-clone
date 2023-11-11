@@ -6,12 +6,12 @@ import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./TripsClient";
 
-export const dynamic = 'force-dynamic'
+
 
 const TripsPage = async () => {
   const currentUser = await getCurrentUser();
 
-  if (!currentUser) {
+  if (!currentUser?.id) {
     return (
       
         <EmptyState

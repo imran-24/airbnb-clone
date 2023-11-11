@@ -8,12 +8,12 @@ import TripsClient from "./PropertiesClient";
 import getAllListings from "../actions/getListings";
 import PropertiesClient from "./PropertiesClient";
 
-export const dynamic = 'force-dynamic'
+
 
 const PropertiesPage = async () => {
   const currentUser = await getCurrentUser();
 
-  if (!currentUser) {
+  if (!currentUser?.id) {
     return (
       
         <EmptyState

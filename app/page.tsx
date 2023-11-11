@@ -13,8 +13,8 @@ interface HomeProps{
   searchParams: IListingInterface
 }
 const Home = async({ searchParams}: HomeProps) => {
+  console.log(searchParams)
   const listings = await getAllListings(searchParams)
-  
   const isEmpty = listings?.length == 0
   const currentUser = await getCurrentUser()
 
