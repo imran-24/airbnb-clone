@@ -56,7 +56,7 @@ const ListingClient: React.FC<ListingClientInterface> = ({
 
     const category = useMemo(()=>{
         return categories.find(item => listing.category == item.label)
-    },[categories, listing.category])
+    },[listing?.category])
 
     const onCreateReservation = useCallback(()=>{
         if(!currentUser) return  loginModal.onOpen();

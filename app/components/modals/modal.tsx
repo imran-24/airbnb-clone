@@ -46,7 +46,7 @@ const Modal: React.FC<ModalInterface> = ({ title,secondaryAction, secondaryLabel
     const handleSecondaryAction = useCallback(()=>{
         if(disabled || !secondaryAction) return 
         secondaryAction()
-    },[secondaryAction])
+    },[secondaryAction, disabled])
     
     if(!isOpen) return null;
     return (

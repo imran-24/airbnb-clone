@@ -39,7 +39,8 @@ const ListingHead: React.FC<ListingHeadInterface> = ({
       relative
       
       '>
-        <img
+        <Image
+        fill
         alt="Image"
         src={imageSrc}
         className='object-cover rounded-lg w-full h-full'

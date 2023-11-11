@@ -25,7 +25,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
         onChange(e.target.result)
     }
     reader.readAsDataURL(file)
-  },[handleChange])
+  },[ onChange])
 
   const { getRootProps, getInputProps } = useDropzone({ 
     maxFiles: 1, 
@@ -42,9 +42,10 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
       <input {...getInputProps()} />
       {base64  ? (
         <div className="flex items-center w-full h-full justify-center">
-          <img
+          <Image
+            width={80}
+            height={50}
             src={base64}
-            
             alt="Uploaded image"
             className='w-full h-full rounded-md object-cover'
           />
